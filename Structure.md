@@ -1,0 +1,32 @@
+# GHATA SYSTEM DESIGN
+## ModelS
+ - ## Event
+  - name
+  - date 
+  - time 
+  - image
+  - description
+  - creator_id 
+ - ## Location 
+   - name
+   - lag 
+   - lng
+ - ## Category
+   - name 
+   - image 
+   - 
+ - ## User
+   - Username 
+   - Email 
+   - Phone 
+   - password 
+   - image  
+ - ## Ticket
+   - event_id 
+   - user_id
+   - price
+ - ## Ticket Type
+    - name  // Free or Paid
+ - ## Likeable
+  - user_id
+  - event_id
