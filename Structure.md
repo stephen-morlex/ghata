@@ -29,4 +29,4 @@
     - name  // Free or Paid
  - ## Likeable
   - user_id
-  - event_id
+  - event_id //
