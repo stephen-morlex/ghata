@@ -18,7 +18,7 @@ class LocationPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return true;
     }
 
     /**
@@ -31,6 +31,7 @@ class LocationPolicy
     public function view(User $user, Location $location)
     {
         //
+        return true;
     }
 
     /**
@@ -42,6 +43,7 @@ class LocationPolicy
     public function create(User $user)
     {
         //
+        return true;
     }
 
     /**
@@ -54,6 +56,7 @@ class LocationPolicy
     public function update(User $user, Location $location)
     {
         //
+        return true;
     }
 
     /**
@@ -66,6 +69,7 @@ class LocationPolicy
     public function delete(User $user, Location $location)
     {
         //
+        return true;
     }
 
     /**
@@ -78,6 +82,7 @@ class LocationPolicy
     public function restore(User $user, Location $location)
     {
         //
+        return true;
     }
 
     /**
@@ -90,5 +95,6 @@ class LocationPolicy
     public function forceDelete(User $user, Location $location)
     {
         //
+        return true;
     }
 }

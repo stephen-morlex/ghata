@@ -14,7 +14,7 @@
  - ## Category
    - name 
    - image 
-   - 
+   - color code //tobe added
  - ## User
    - Username 
    - Email 
