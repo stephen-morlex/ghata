@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\LocationResource\Pages;
 use App\Filament\Resources\LocationResource\RelationManagers;
+use App\Filament\Resources\LocationResource\Widgets\StatsOverview;
 use App\Models\Location;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -56,13 +57,19 @@ class LocationResource extends Resource
             ]);
     }
 
+
+    public static function getWidgets(): array
+    {
+        return [
+            StatsOverview::class,
+        ];
+    }
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-
     public static function getPages(): array
     {
         return [
