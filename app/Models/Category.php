@@ -10,7 +10,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 class Category extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
-    protected $fillable = ['name', 'color', 'cover'];
+    protected $fillable = ['name', 'color', 'cover', 'slug'];
 
     public function events()
     {

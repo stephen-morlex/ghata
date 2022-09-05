@@ -8,8 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Location extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'lat', 'lng'];
-
+    protected $fillable = ['name', 'lat', 'lng', 'slug'];
     public function events()
     {
         return $this->hasMany(Event::class);

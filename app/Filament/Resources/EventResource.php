@@ -8,8 +8,10 @@ use App\Models\Category;
 use App\Models\Event;
 use App\Models\Location;
 use App\Models\User;
+use Closure;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -18,6 +20,7 @@ use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Str;
 
 class EventResource extends Resource
 {
@@ -31,7 +34,11 @@ class EventResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)->reactive()
+                    ->afterStateUpdated(function (Closure $set, $state) {
+                        $set('slug', Str::slug($state));
+                    }),
+                TextInput::make('slug'),
                 Forms\Components\DatePicker::make('start_date')->displayFormat('d/m/Y'),
                 Forms\Components\DatePicker::make('end_date')->displayFormat('d/m/Y'),
                 Forms\Components\TimePicker::make('start_time'),

@@ -10,7 +10,8 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 class Event extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
-    protected $fillable = ['name', 'description', 'start_date', 'end_date', 'location_id', 'category_id', 'user_id', 'cover', 'start_time', 'end_time'];
+    protected $fillable = ['name', 'description', 'start_date', 'end_date', 'location_id', 'category_id', 'user_id', 'cover', 'start_time', 'end_time
+', 'slug'];
 
     /**
      * Get the post that owns the comment.
