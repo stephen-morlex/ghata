@@ -22,6 +22,7 @@ class LocationResource extends Resource
     protected static ?string $model = Location::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-location-marker';
+    protected static ?string $navigationGroup = 'Event Management';
 
     public static function form(Form $form): Form
     {

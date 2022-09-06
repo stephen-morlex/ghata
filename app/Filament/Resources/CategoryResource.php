@@ -26,7 +26,7 @@ class CategoryResource extends Resource
     protected static ?string $recordTitleAttribute = 'name';
     protected static ?int $navigationSort = 2;
     protected static ?string $navigationIcon = 'heroicon-o-collection';
-
+    protected static ?string $navigationGroup = 'Event Management';
     public static function form(Form $form): Form
     {
         return $form
